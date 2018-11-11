@@ -7,6 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <DataGrid Name="dg_Main" HorizontalAlignment="Left" Height="300" Margin="30,58,0,0" VerticalAlignment="Top" Width="737" SelectionChanged="DataGrid_SelectionChanged"/>
+        <Button Name="btn_Details" Content="Details" HorizontalAlignment="Left" Margin="30,377,0,0" VerticalAlignment="Top" Width="75" Height="33" RenderTransformOrigin="1.408,-0.821"/>
+        <Button Name="btn_Help" Content="Help" HorizontalAlignment="Left" Margin="30,10,0,0" VerticalAlignment="Top" Width="75" Height="38"/>
+        <Button Name="btn_DelSel" Content="Delete Selected" HorizontalAlignment="Left" Margin="670,377,0,0" VerticalAlignment="Top" Width="97" Height="33"/>
+        <Button Name="btn_PriceSort" Content="Price Sort" HorizontalAlignment="Left" Margin="146,376,0,0" VerticalAlignment="Top" Width="75" Height="33"/>
+        <Button Name="btn_Close" Content="Close" HorizontalAlignment="Left" Margin="692,13,0,0" VerticalAlignment="Top" Width="75" Height="38" RenderTransformOrigin="1.408,-0.821"/>
+        <Label Name="lbl_Title" Content="PlayStaton Popular Products" HorizontalAlignment="Left" FontSize="24" Margin="243,13,0,0" VerticalAlignment="Top" Width="329" Height="38"/>
+
     </Grid>
 </Window>
