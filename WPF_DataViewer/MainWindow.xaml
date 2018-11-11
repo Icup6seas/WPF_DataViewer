@@ -5,15 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_DataViewer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <DataGrid Name="dg_Main" HorizontalAlignment="Left" Height="300" Margin="30,58,0,0" VerticalAlignment="Top" Width="737" SelectionChanged="DataGrid_SelectionChanged"/>
-        <Button Name="btn_Details" Content="Details" HorizontalAlignment="Left" Margin="30,377,0,0" VerticalAlignment="Top" Width="75" Height="33" RenderTransformOrigin="1.408,-0.821"/>
-        <Button Name="btn_Help" Content="Help" HorizontalAlignment="Left" Margin="30,10,0,0" VerticalAlignment="Top" Width="75" Height="38"/>
-        <Button Name="btn_DelSel" Content="Delete Selected" HorizontalAlignment="Left" Margin="670,377,0,0" VerticalAlignment="Top" Width="97" Height="33"/>
-        <Button Name="btn_PriceSort" Content="Price Sort" HorizontalAlignment="Left" Margin="146,376,0,0" VerticalAlignment="Top" Width="75" Height="33"/>
-        <Button Name="btn_Close" Content="Close" HorizontalAlignment="Left" Margin="692,13,0,0" VerticalAlignment="Top" Width="75" Height="38" RenderTransformOrigin="1.408,-0.821"/>
-        <Label Name="lbl_Title" Content="PlayStaton Popular Products" HorizontalAlignment="Left" FontSize="24" Margin="243,13,0,0" VerticalAlignment="Top" Width="329" Height="38"/>
+        Title="MainWindow" Height="416.8" Width="304.4">
+    <Window.Resources>
+        <XmlDataProvider Source="Data\PlaystationProducts.xml"
+                         XPath="Products" x:Key="productData" />
+    </Window.Resources>
+    <Grid Margin="0,0,14,6.2">
+        <DataGrid Name="dg_Main" HorizontalAlignment="Left" Height="235" Margin="30,87,0,0" VerticalAlignment="Top" Width="239" AutoGenerateColumns="False" 
+                  ItemsSource="{Binding Source={StaticResource productData},XPath=*}" RenderTransformOrigin="1.002,0.551">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding XPath=@Id}"
+                                    Header="ID" />
+                <DataGridTextColumn Binding="{Binding XPath=@ProductName}"
+                                    Header="Playstation Version" />
+                <DataGridTextColumn Binding="{Binding XPath=@Price}"
+                                    Header="MSRP" />
+                <DataGridTextColumn Binding="{Binding XPath=@Manufacturer}"
+                                    Header="Made In" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Name="btn_Details" Content="Details" HorizontalAlignment="Left" Margin="30,336,0,0" VerticalAlignment="Top" Width="75" Height="33" RenderTransformOrigin="1.408,-0.821"/>
+        <Button Name="btn_Help" Content="Help" HorizontalAlignment="Left" Margin="30,49,0,0" VerticalAlignment="Top" Width="53" Height="24"/>
+        <Button Name="btn_DelSel" Content="Delete Selected" HorizontalAlignment="Left" Margin="172,336,0,0" VerticalAlignment="Top" Width="97" Height="33" RenderTransformOrigin="0.454,1.939"/>
+        <Button Name="btn_Close" Content="Close" HorizontalAlignment="Left" Margin="211,49,0,0" VerticalAlignment="Top" Width="58" Height="24" RenderTransformOrigin="1.408,-0.821"/>
+        <Label Name="lbl_Title" Content="  PlayStaton Popular Products" HorizontalAlignment="Center" FontSize="17" Margin="30,10,14.6,0" VerticalAlignment="Top" Width="239" Height="34" RenderTransformOrigin="0.306,0.5"/>
 
     </Grid>
 </Window>
