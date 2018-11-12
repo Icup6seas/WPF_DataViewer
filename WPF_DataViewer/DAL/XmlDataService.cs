@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Xml.Serialization;
 using System.IO;
 
-namespace WinForms_DataViewer
+namespace WPF_DataViewer
 {
     public class XmlDataService : IDataService
     {

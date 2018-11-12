@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WinForms_DataViewer
+namespace WPF_DataViewer
 {
     public interface IDataService
     {

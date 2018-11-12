@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace WinForms_DataViewer
+namespace WPF_DataViewer
 {
     public class Product
     {

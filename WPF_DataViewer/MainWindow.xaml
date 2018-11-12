@@ -10,8 +10,8 @@
         <XmlDataProvider x:Key="productData" Source="Data/PlaystationProducts.xml" XPath="Products" />
     </Window.Resources>
     <Grid Margin="0,0,14,6.2">
-        <DataGrid Name="dataGrid" HorizontalAlignment="Left" Height="235" Margin="30,87,0,0" VerticalAlignment="Top" Width="239" AutoGenerateColumns="False" ItemsSource="{Binding Path=Elements[Product]}">
-        <DataGrid.Columns>
+        <DataGrid Name="dataGrid" HorizontalAlignment="Left" Height="235" Margin="30,87,0,0" VerticalAlignment="Top" Width="239" AutoGenerateColumns="False" CanUserDeleteRows="False" ItemsSource="{Binding Path=Elements[Product]}">
+            <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding Path=Element[Id].Value}"/>
                 <DataGridTextColumn Header="Playstation Version" Binding="{Binding Path=Element[ProductName].Value}"/>
                 <DataGridTextColumn Header="MSRP" Binding="{Binding Path=Element[Price].Value}"/>

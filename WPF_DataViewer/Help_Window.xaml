@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_DataViewer"
         mc:Ignorable="d"
-        Title="Help" Height="461.645" Width="368.365">
+        Title="Help Window" Height="368.445" Width="291.565">
     <Grid>
-        <Button Name="btn_Help_Close" Content="Close" HorizontalAlignment="Left" Margin="277,10,0,0" VerticalAlignment="Top" Width="75" Click="btn_Help_Close_Click"/>
+        <Button Name="btn_Help_Close" Content="Close" HorizontalAlignment="Left" Margin="198,11,0,0" VerticalAlignment="Top" Width="75" Click="btn_Help_Close_Click"/>
+        <Label Content="HELP!!!" Name="lbl_Help" FontSize="25" FontWeight="Bold"  TextBlock.Foreground="Red" HorizontalAlignment="Left" Margin="10,11,0,0" VerticalAlignment="Top" Width="95"/>
+        <TextBlock HorizontalAlignment="Left" Margin="19,127,0,0" TextWrapping="Wrap" Text="- Clicking the Close button closes the current window." VerticalAlignment="Top" Width="254"/>
+        <TextBlock HorizontalAlignment="Left" Margin="19,77,0,0" TextWrapping="Wrap" Text="- Click the LOAD DATA button to pull data from the XML file." VerticalAlignment="Top" Width="254"/>
+        <TextBlock HorizontalAlignment="Left" Margin="19,179,0,0" TextWrapping="Wrap" Text="- Clicking the Details button displays more details about the selected product." VerticalAlignment="Top" Width="254"/>
+        <TextBlock HorizontalAlignment="Left" Margin="19,232,0,0" TextWrapping="Wrap" Text="- Clicking the Delete Selected button deletes the current hightlighted row." VerticalAlignment="Top" Width="254"/>
+        <TextBlock HorizontalAlignment="Left" Margin="19,287,0,0" TextWrapping="Wrap" Text="- Clicking on any of the Column titles sorts the data in that column." VerticalAlignment="Top" Width="254"/>
     </Grid>
 </Window>
