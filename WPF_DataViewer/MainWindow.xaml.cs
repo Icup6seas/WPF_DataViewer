@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
 namespace WPF_DataViewer
 {
@@ -25,9 +26,34 @@ namespace WPF_DataViewer
             InitializeComponent();
         }
 
-        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //
+        //Closes application
+        private void btn_Close_Click(object sender, RoutedEventArgs e)
         {
+            Close();
+        }
 
+        private void btn_Details_Click(object sender, RoutedEventArgs e)
+        {
+            Details_Window details = new Details_Window();
+            details.Show();
+        }
+
+        private void btn_DelSel_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void btn_Help_Click(object sender, RoutedEventArgs e)
+        {
+            Help_Window help = new Help_Window();
+            help.Show();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var productList = XElement.Load(@"Data/PlaystationProducts.xml");
+            this.dataGrid.DataContext = productList;
         }
     }
 }

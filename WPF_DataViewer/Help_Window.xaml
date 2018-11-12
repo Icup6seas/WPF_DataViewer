@@ -1,0 +1,12 @@
+﻿<Window x:Class="WPF_DataViewer.Help_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_DataViewer"
+        mc:Ignorable="d"
+        Title="Help" Height="461.645" Width="368.365">
+    <Grid>
+        <Button Name="btn_Help_Close" Content="Close" HorizontalAlignment="Left" Margin="277,10,0,0" VerticalAlignment="Top" Width="75" Click="btn_Help_Close_Click"/>
+    </Grid>
+</Window>

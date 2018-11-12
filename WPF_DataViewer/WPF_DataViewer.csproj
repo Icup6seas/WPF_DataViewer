@@ -55,6 +55,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DAL\IDataService.cs" />
+    <Compile Include="DAL\XmlDataService.cs" />
+    <Page Include="Details_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Help_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -64,6 +74,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Data\AppConfig.cs" />
+    <Compile Include="Details_Window.xaml.cs">
+      <DependentUpon>Details_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Help_Window.xaml.cs">
+      <DependentUpon>Help_Window.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
